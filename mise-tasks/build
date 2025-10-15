@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+set -e
+
+#MISE description="Build uCore image"
+#USAGE flag "-i --image <image>" help="Which image to build"
+#USAGE flag "-t --tag <tag>" help="Tag to apply to the built image"
+
+echo "Building ${usage_image:-ucore-minimal} image..."
+podman build \
+    --pull=newer \
+    --tag "${usage_image:-ucore-minimal}:${usage_tag:-stable}" \
+    --file ./Containerfile.${usage_image:-ucore-minimal}
