@@ -5,7 +5,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/${IMAGE}:stable
+FROM ghcr.io/ublue-os/${IMAGE}:stable@sha256:e99ea178f58df8bf38a88c319859a938523f493b51cf632a139608b70e613660
 
 ### MODIFICATIONS
 COPY system_files/ /
