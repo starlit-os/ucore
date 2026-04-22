@@ -4,7 +4,7 @@ COPY build_files /
 ADD https://static.pangolin.net/get-newt.sh /get-newt.sh
 
 # Base Image
-FROM ghcr.io/ublue-os/ucore-minimal:stable@sha256:c3a6842b232f3728dc8f682dadef64688327222fce63069473cb9ba10cc584f7
+FROM ghcr.io/ublue-os/ucore-minimal:stable@sha256:998a7040fd50d7c5497c348959ce89d2f69894c97137740e20f1d411723f37be
 
 ### MODIFICATIONS
 COPY system_files/ /
